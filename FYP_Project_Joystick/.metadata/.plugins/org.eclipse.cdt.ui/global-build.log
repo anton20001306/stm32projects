@@ -1,0 +1,25 @@
+22:14:23 **** Incremental Build of configuration Debug for project USART_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/usart_interrupt.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart_interrupt.d" -MT"Core/Src/usart_interrupt.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart_interrupt.o"
+arm-none-eabi-gcc -o "USART_Interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/anton/STM32CubeIDE/FYP/USART2_Interrupt/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USART_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: USART_Interrupt.elf
+ 
+arm-none-eabi-size  USART_Interrupt.elf 
+arm-none-eabi-objdump -h -S USART_Interrupt.elf  > "USART_Interrupt.list"
+arm-none-eabi-objcopy  -O ihex USART_Interrupt.elf  "USART_Interrupt.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1364	      4	   1572	   2940	    b7c	USART_Interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: USART_Interrupt.hex
+ 
+Finished building: USART_Interrupt.list
+ 
+22:14:28 **** Incremental Build of configuration Debug for project USART_Interrupt ****
+make -j8 all 
+arm-none-eabi-size  USART_Interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1364	      4	   1572	   2940	    b7c	USART_Interrupt.elf
+Finished building: default.size.stdout
+ 

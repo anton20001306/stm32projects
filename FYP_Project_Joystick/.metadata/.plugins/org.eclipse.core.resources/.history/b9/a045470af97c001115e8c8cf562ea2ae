@@ -1,0 +1,23 @@
+/*
+ * usart_interrupt.h
+ *
+ *  Created on: Apr 10, 2026
+ *      Author: Praveen
+ */
+
+#ifndef INC_USART_INTERRUPT_H_
+#define INC_USART_INTERRUPT_H_
+
+#include "main.h"
+
+
+extern volatile char rx_char;
+extern volatile char rx_ready;
+
+void USART_Init(void);
+void Send_Char(uint8_t data);
+void Send_String(char *data);
+void Enable_Interrupt(void);
+void USART2_IRQHandler(void);
+
+#endif /* INC_USART_INTERRUPT_H_ */

@@ -1,0 +1,5 @@
+../Core/Src/adc.c:12:6:ADC_Init	4	static
+../Core/Src/adc.c:79:6:ADC_DMA_Init	4	static
+../Core/Src/adc.c:125:6:ADC_Enable	16	static
+../Core/Src/adc.c:138:6:ADC_Start	4	static
+../Core/Src/adc.c:150:6:ADC_Disable	4	static

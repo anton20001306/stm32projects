@@ -1,0 +1,73 @@
+/*
+ * usart_interrupt.c
+ *
+ *  Created on: Apr 10, 2026
+ *      Author: Praveen
+ */
+#include "main.h"
+#include  "usart_interrupt.h"
+
+volatile char rx_char;
+volatile uint8_t rx_ready = 0;
+
+void USART_Init(void)
+{
+	/*RCC clock enable*/
+	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+	RCC->APB1ENR |= RCC_APB1ENR_USART2EN;		// USART2  enable
+
+	/*Configure USART pins PA2 and PA3*/
+	GPIOA->MODER &= ~(GPIO_MODER_MODE2 | GPIO_MODER_MODE3);
+	GPIOA->MODER |= (GPIO_MODER_MODE2_1 | GPIO_MODER_MODE3_1);
+
+	/*Set Alternate function mode*/
+	GPIOA->AFR[0] &= ~(0xFF << (4 * 2));
+	GPIOA->AFR[0] |=  (0x77 << (4 * 2));
+
+	/*Set high speed*/
+	GPIOA->OSPEEDR &= ~(GPIO_OSPEEDER_OSPEEDR2 | GPIO_OSPEEDER_OSPEEDR3);
+	GPIOA->OSPEEDR |= (GPIO_OSPEEDER_OSPEEDR2 | GPIO_OSPEEDER_OSPEEDR3);
+
+	/*USART2 initialization*/
+	USART2->CR1 = 0;							// Reset the CR1
+
+	USART2->CR1 |= USART_CR1_TE | USART_CR1_RE;	// Enable transmission and receive
+
+	/*Define 8 bit data length*/
+	USART2->CR1 &= ~(USART_CR1_M);
+
+	/*Define the baud rate*/
+	USART2->BRR = (8 << 4) | (11);				// FCLK = 16MHz and BaudRate = 115200
+
+	USART2->CR1 |= USART_CR1_UE;				// Enable USART2
+
+}
+
+void Send_Char(uint8_t data)
+{
+	while(!(USART2->SR & USART_SR_TXE));
+	USART2->DR = data;
+}
+
+void Send_String(char *data)
+{
+	while(*data) Send_Char(*data++);
+}
+
+void Enable_Interrupt(void)
+{
+	USART2->CR1 |= USART_CR1_RXNEIE;
+	NVIC_EnableIRQ(USART2_IRQn);
+}
+
+void USART2_IRQHandler(void)
+{
+	if((USART2->SR & USART_SR_RXNE))
+	{
+		rx_char = USART2->DR;
+		//rx_ready = 1;
+		//Send_Char(rx_char);
+
+
+	}
+}

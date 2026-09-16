@@ -1,0 +1,6 @@
+../Core/Src/adc_dma.c:11:6:ADC_Init	1
+../Core/Src/adc_dma.c:71:6:ADC_Enable	2
+../Core/Src/adc_dma.c:83:6:ADC_Start	1
+../Core/Src/adc_dma.c:95:6:DMA_Init	1
+../Core/Src/adc_dma.c:125:6:DMA_Config	1
+../Core/Src/adc_dma.c:149:6:ADC_Disable	1

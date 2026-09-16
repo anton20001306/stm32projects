@@ -1,0 +1,7 @@
+../Core/Src/main.c:6:6:Gpio_Init	4	static
+../Core/Src/main.c:37:6:Send_Char	16	static
+../Core/Src/main.c:43:6:Send_String	16	static
+../Core/Src/main.c:48:9:Read_Char	16	static
+../Core/Src/main.c:55:5:main	16	static
+../Core/Src/main.c:75:6:SystemClock_Config	88	static
+../Core/Src/main.c:120:6:Error_Handler	4	static,ignoring_inline_asm

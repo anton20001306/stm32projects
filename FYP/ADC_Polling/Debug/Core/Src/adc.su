@@ -1,0 +1,6 @@
+../Core/Src/adc.c:11:6:ADC_Init	4	static
+../Core/Src/adc.c:52:6:ADC_Enable	16	static
+../Core/Src/adc.c:64:6:ADC_Start	16	static
+../Core/Src/adc.c:85:6:ADC_WaitForConv	4	static
+../Core/Src/adc.c:93:10:ADC_GetVal	4	static
+../Core/Src/adc.c:98:6:ADC_Disable	4	static

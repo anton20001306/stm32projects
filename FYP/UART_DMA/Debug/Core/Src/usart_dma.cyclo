@@ -1,0 +1,7 @@
+../Core/Src/usart_dma.c:25:6:USART_Init	1
+../Core/Src/usart_dma.c:63:6:DMA_TX_Init	2
+../Core/Src/usart_dma.c:97:6:DMA_Rx_Init	1
+../Core/Src/usart_dma.c:137:6:DMA_Rx_Config	1
+../Core/Src/usart_dma.c:152:6:DMA1_Stream5_IRQHandler	5
+../Core/Src/usart_dma.c:168:6:DMA_TX_Send	2
+../Core/Src/usart_dma.c:183:6:Tim6_Tick	1

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;UART_DMA/Core/Src/usart_interrupt.c&apos; to &apos;usart_dma.c&apos;" description="Rename resource &apos;usart_interrupt.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/usart_interrupt.c" name="usart_dma.c" stamp="1784716962195" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;UART_DMA/Core/Inc/usart_interrupt.h&apos; to &apos;usart_dma.h&apos;" description="Rename resource &apos;usart_interrupt.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/usart_interrupt.h" name="usart_dma.h" stamp="1784716990704" updateReferences="true"/>
+</session>

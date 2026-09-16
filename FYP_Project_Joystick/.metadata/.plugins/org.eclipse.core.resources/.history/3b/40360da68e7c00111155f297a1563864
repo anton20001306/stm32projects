@@ -1,0 +1,20 @@
+/*
+ * keypad.c
+ *
+ *  Created on: Jul 10, 2026
+ *      Author: anton
+ */
+
+#include "stm32f446xx.h"
+
+void keypad_init(void){
+
+	/*Enable clock access to GPIOC*/
+	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
+
+	/*Set PC0 to PC3 as input*/
+	GPIOC->MODER &= ~(GPIO_MODER_MODE0|GPIO_MODER_MODE1|GPIO_MODER_MODE2|GPIO_MODER_MODE3);
+
+}
+
+

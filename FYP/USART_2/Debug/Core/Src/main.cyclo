@@ -1,0 +1,7 @@
+../Core/Src/main.c:6:6:Gpio_Init	1
+../Core/Src/main.c:37:6:Send_Char	2
+../Core/Src/main.c:43:6:Send_String	2
+../Core/Src/main.c:48:9:Read_Char	2
+../Core/Src/main.c:55:5:main	1
+../Core/Src/main.c:75:6:SystemClock_Config	3
+../Core/Src/main.c:120:6:Error_Handler	1
