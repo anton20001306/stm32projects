@@ -1,0 +1,42 @@
+# Build and Debug directories
+Debug/
+Release/
+build/
+.metadata/
+
+# Compiled binaries
+*.elf
+*.hex
+*.bin
+*.o
+*.d
+*.a
+*.so
+
+# IDE and project files
+.cproject
+.project
+.settings/
+*.launch
+
+# STM32CubeIDE specific
+.cproject
+.mxproject
+
+# Editor temp files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Output and temporary files
+*.list
+*.map
+*.bak
+
+# LST files (linker output)
+*.lst
+
+# Python cache
+__pycache__/
+*.pyc
